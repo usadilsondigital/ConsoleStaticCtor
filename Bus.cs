@@ -35,6 +35,8 @@ namespace ConsoleStaticCtor
             Console.WriteLine("Bus #{0} is created.", RouteNumber);
         }
 
+        
+
 
     }
 }
