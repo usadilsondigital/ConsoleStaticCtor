@@ -18,8 +18,9 @@ namespace ConsoleStaticCtor
 
         //Static ctor to initializate the static variable
         //its invoked before the first instance ctor is run
-        static Bus() { 
-        globalStartTime = DateTime.Now;
+        static Bus()
+        {
+            globalStartTime = DateTime.Now;
 
             //The following statement produces the first line of output
             //and the line occurs only once.
@@ -27,6 +28,13 @@ namespace ConsoleStaticCtor
                 globalStartTime.ToLongTimeString());
 
         }
+
+        public Bus(int routeNum)
+        {
+            RouteNumber = routeNum;
+            Console.WriteLine("Bus #{0} is created.", RouteNumber);
+        }
+
 
     }
 }
