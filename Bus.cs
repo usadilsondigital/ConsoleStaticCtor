@@ -16,5 +16,17 @@ namespace ConsoleStaticCtor
         //Property for the number of each bus.
         protected int RouteNumber { get; set; }
 
+        //Static ctor to initializate the static variable
+        //its invoked before the first instance ctor is run
+        static Bus() { 
+        globalStartTime = DateTime.Now;
+
+            //The following statement produces the first line of output
+            //and the line occurs only once.
+            Console.WriteLine("Static ctor sets global start time to {0}",
+                globalStartTime.ToLongTimeString());
+
+        }
+
     }
 }
