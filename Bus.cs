@@ -36,7 +36,14 @@ namespace ConsoleStaticCtor
         }
 
         public void Drive() { 
-        TimeSpan timeelapsed = DateTime.Now - globalStartTime;
+        TimeSpan elapsedTime = DateTime.Now - globalStartTime
+
+        // For demonstration purposes we treat milliseconds as minutes to simulate
+        // actual bus times. Do not do this in your actual bus schedule program!
+        Console.WriteLine("{0} is starting its route {1:N2} minutes after global start time {2}.",
+                                this.RouteNumber,
+                                elapsedTime.Milliseconds,
+                                globalStartTime.ToShortTimeString());
         }
         
 

@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // The creation of this instance activates the static constructor.
+            Bus bus1 = new Bus(71);
         }
     }
 }
