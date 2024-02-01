@@ -18,6 +18,13 @@
             // Wait for bus2 to warm up.
             System.Threading.Thread.Sleep(25);
 
+            // Send bus2 on its way.
+            bus2.Drive();
+
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
 
         }
     }
