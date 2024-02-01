@@ -10,7 +10,7 @@ namespace ConsoleStaticCtor
     {
         //Static variable  used by all Bus Instances.
         //Represent the time the first bus of the day starts its route.
-        public static readonly DateTime globalStartTime { get; set; }
+        public static DateTime globalStartTime { get; set; }
 
 
         //Property for the number of each bus.
@@ -35,8 +35,8 @@ namespace ConsoleStaticCtor
             Console.WriteLine("Bus #{0} is created.", RouteNumber);
         }
 
-        public void Drive() { 
-        TimeSpan elapsedTime = DateTime.Now - globalStartTime
+        public void Drive() {
+            TimeSpan elapsedTime = DateTime.Now - globalStartTime;
 
         // For demonstration purposes we treat milliseconds as minutes to simulate
         // actual bus times. Do not do this in your actual bus schedule program!
