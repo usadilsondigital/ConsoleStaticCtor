@@ -15,6 +15,9 @@
             bus1.Drive();
 
 
+            // Wait for bus2 to warm up.
+            System.Threading.Thread.Sleep(25);
+
 
         }
     }
